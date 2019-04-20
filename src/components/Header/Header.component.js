@@ -1,8 +1,11 @@
 import React from 'react'
+import NavMenu from '../NavMenu/NavMenu.component';
 
 const Header = () => {
     return (
-        <h1>Mój blog</h1>
+        <header>
+            <NavMenu />
+        </header>
     )
 }
 
