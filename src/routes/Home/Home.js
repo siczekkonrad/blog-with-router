@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import Counter from '../../components/Counter/Counter.component'
-import {Link} from 'react-router-dom'
+import PostsList from '../../components/PostsList/PostsList';
 
 class Home extends Component {
     state = {
-        posts: []
+        posts: [],
+        loading: true
     }
 
     componentDidMount = () => {
@@ -13,19 +14,19 @@ class Home extends Component {
             .then(json =>
                 this.setState({
                     posts: [...json],
+                    loading: false
                 })
             )
     }
     render() {
         return (
             <div className='App'>
-                <ul>
-                    {this.state.posts.map(post => (
-                        <li key={post.id}>
-                            <Link to={`/post/${post.id}`}>{post.title}</Link>
-                        </li>
-                    ))}
-                </ul>
+                {!this.state.loading 
+                    ?
+                    <PostsList posts={this.state.posts} />
+                    :
+                    <h1>Ładuję posty...</h1>
+                }
                 <Counter />
             </div>
         )
