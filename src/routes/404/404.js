@@ -10,7 +10,7 @@ class NotFound extends Component {
            this.setState(prevState => ({
                navigate: true
            }))
-        }, 10000)
+        }, 10000);
     }
     render() {
         if(this.state.navigate) {

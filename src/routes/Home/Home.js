@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import Counter from '../../components/Counter/Counter.component'
 import PostsList from '../../components/PostsList/PostsList.component';
 
 class Home extends Component {
@@ -27,11 +26,10 @@ class Home extends Component {
                     :
                     <h1>Ładuję posty...</h1>
                 }
-                <Counter />
             </div>
         )
     }
     
 }
 
-export default Home
+export default Home;

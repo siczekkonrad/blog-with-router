@@ -1,11 +1,19 @@
 import React from 'react'
+import styled from 'styled-components';
 
+const StyledFooter = styled.footer`
+  padding: 20px;
+  margin-top: 60px;
+  background: #2a5298;
+  color: #fff;
+  text-align: center;
+`;
 const Footer = () => {
    
     return (
-        <footer className='footer'>
+        <StyledFooter>
             &copy; - {new Date().getFullYear()}
-        </footer>
+        </StyledFooter>
     )
 }
 

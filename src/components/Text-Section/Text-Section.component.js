@@ -3,7 +3,7 @@ import React from 'react'
 const TextSection = (props) => {
     return(
         <div className='text-section'>
-            <p>{props.text}</p>
+            <p>{props.children}</p>
         </div>
     )
 }
