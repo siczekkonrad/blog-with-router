@@ -11,6 +11,7 @@ import Home from './routes/Home/Home'
 import About from './routes/Author/Author'
 import Contact from './routes/Contact/Contact'
 import Post from './routes/Post/Post'
+import Default from './routes/404/404'
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
               <Route path='/autor' component={About} />
               <Route path='/kontakt' component={Contact} /> 
               <Route path='/post/:id' component={Post} /> 
+              <Route path="*" component={Default} />
             </Switch>
           <Footer />
         </div>
