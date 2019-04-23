@@ -2,20 +2,7 @@ import React, {Component} from 'react';
 import CommentsForm from '../../components/CommentsForm/CommentsForm.component';
 import CommentsList from '../../components/CommentsList/CommentsList.component';
 import TextSection from '../../components/Text-Section/Text-Section.component';
-import styled from 'styled-components';
-
-const StyledArticle = styled.article`
-    margin-top: 100px;
-    padding: 0 50px;
-`;
-
-const StyledArticleCommentsForm = styled.div`
-        margin-top: 100px;
-`;
-
-const StyledCommentsContainer = styled.div`
-    margin-top: 50px;
-`;
+import { StyledArticle, StyledArticleCommentsForm, StyledCommentsContainer } from './Post.style';
 
 class Post extends Component {
     state = {

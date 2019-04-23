@@ -1,19 +1,6 @@
-import React from 'react'
-import TextSection from '../../components/Text-Section/Text-Section.component'
-import styled from 'styled-components'
-
-const StyledContactDataList = styled.ul`
-  list-style: none;
-  padding-left: 0px;
-
-  li {
-    margin-bottom: 10px;
-
-    a {
-      color: #2a5298;
-    }
-  }
-`;
+import React from 'react';
+import TextSection from '../../components/Text-Section/Text-Section.component';
+import { StyledContactDataList } from './Author.style';
 
 const Author = () => (
   <div>

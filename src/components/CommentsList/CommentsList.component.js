@@ -1,12 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import TextSection from '../Text-Section/Text-Section.component';
-
-const StyledCommentContainer = styled.div`
-    border: 1px solid #eee;
-    margin-top: 15px;
-    padding: 14px;
-`;
+import { StyledCommentContainer} from './CommetnsList.style';
 
 const CommentsList = props => (
   <div className="CommentsList">
