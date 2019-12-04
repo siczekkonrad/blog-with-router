@@ -2,43 +2,55 @@ import React from 'react';
 import TextSection from '../../components/Text-Section/Text-Section.component';
 import { StyledContactDataList } from './Author.style';
 
-const Author = () => (
-  <div>
-    <h1>O autorze</h1>
-    <TextSection>
-      <h2>Konrad Siczek</h2>
-      <span>Frontend Developer</span>
+const CONTACT_DATA = {
+  title: 'O autorze',
+  author: 'Konrad Siczek',
+  position: 'Frontend Developer',
+  links: [
+    {
+      url: 'https://www.linkedin.com/in/konradsiczek/',
+      linkText: 'LinkedIn'
+    },
+    {
+      url: 'https://github.com/siczekkonrad/',
+      linkText: 'Github'
+    },
+    {
+      url: 'https://twitter.com/blacqraven',
+      linkText: 'Twitter'
+    }
+  ]
+};
+
+const displayLinks = (linksArray) => {
+  return (
+    linksArray.map((item, index) => (
+      <li key={index}>
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item.linkText}
+        </a>
+      </li>
+    ))
+  )
+}
+const Author = () => {
+  const { title, author, position, links } = CONTACT_DATA;
+  return (
+    <div>
+      <h1>{title}</h1>
+      <h2>{author}</h2>
+      <TextSection>
+        <span>{position}</span>
+      </TextSection>
       <StyledContactDataList>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/konradsiczek/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/siczekkonrad/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Github
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://twitter.com/blacqraven"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Twitter
-          </a>
-        </li>
+        {displayLinks(links)}
       </StyledContactDataList>
-    </TextSection>
-  </div>
-);
+    </div>
+  )
+};
 
 export default Author
