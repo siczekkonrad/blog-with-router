@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PostsList from '../../components/PostsList/PostsList.component';
 
 class Home extends Component {
@@ -20,7 +20,7 @@ class Home extends Component {
     render() {
         return (
             <div className='App'>
-                {!this.state.loading 
+                {!this.state.loading
                     ?
                     <PostsList posts={this.state.posts} />
                     :
@@ -29,7 +29,7 @@ class Home extends Component {
             </div>
         )
     }
-    
+
 }
 
 export default Home;

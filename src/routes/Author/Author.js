@@ -22,21 +22,20 @@ const CONTACT_DATA = {
   ]
 };
 
-const displayLinks = (linksArray) => {
-  return (
-    linksArray.map((item, index) => (
-      <li key={index}>
-        <a
-          href={item.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {item.linkText}
-        </a>
-      </li>
-    ))
-  )
-}
+const displayLinks = (linksArray) => (
+  linksArray.map((item, index) => (
+    <li key={index}>
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {item.linkText}
+      </a>
+    </li>
+  ))
+)
+
 const Author = () => {
   const { title, author, position, links } = CONTACT_DATA;
   return (
